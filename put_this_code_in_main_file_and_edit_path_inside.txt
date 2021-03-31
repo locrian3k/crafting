@@ -1,0 +1,11 @@
+#alias {craftlist} {#var crafting On;#class {craftclass} {read} {yourfilenamehere/recipecheck.txt};craftlist2;#class craftclass kill;#var crafting Off}
+
+#alias {frags} {#foreach {ascension;blasting;compassion;damnation;destruction;knowledge;light;might;rage;rejuvenation;shadow;soul;the unseen;water;willy} {type} {
+        unstash all fragment of $type;
+        #10 assemble fragment of $type;
+        stash all;
+        unstash all essence of $type;
+        #5 assemble essence of $type;
+        stash all;
+    }
+}

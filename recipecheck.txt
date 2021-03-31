@@ -1,0 +1,579 @@
+#alias {craftlist2} {
+    setmod ROWS 100;#class {crafting} {open};
+    #act {^%%1%s\|} {#var {%%1} yes};
+    #gag {Your new value for ROWS is 100.};
+    #send !stashlist;
+    
+    #act {items in your satchel} {
+#showme {Component Name            |   T |  L |  S |  G |  A |  P |  C |  W |};
+#showme {=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-};
+        #if {"${Aquamarine}" == "yes" && "${Aquamarine Dust}" == "yes" && "${Fragment Of Light}" == "yes"}
+        {#showme {You can create Minor Might (Str) (clvl 1-5)};};
+
+        #if {"${Copper Shards}" == "yes" && "${Tiger's Eye}" == "yes" && "${Fragment Of Light}" == "yes"}
+        {#showme {You can create Minor Blades Aggression (Edged WC) (clvl 1-5)};};
+
+        #if {"${Copper Shards}" == "yes" && "${Morganite}" == "yes" && "${Fragment Of Light}" == "yes"}
+        {#showme {You can create Minor Blades Protection (Edged AC) (clvl 2-6)};};
+
+        #if {"${Copper Shards}" == "yes" && "${Tiger's Eye}" == "yes" && "${Fragment Of Light}" == "yes"}
+        {#showme {You can create Minor Agility (Dex) (clvl 3-7)};};
+
+        #if {"${Aquamarine}" == "yes" && "${Tiger's Eye Dust}" == "yes" && "${Fragment Of Water}" == "yes"}
+        {#showme {You can create Minor Crushing Protection (Blunt AC) (clvl 3-7)};};
+
+        #if {"${Aquamarine}" == "yes" && "${Tiger's Eye Dust}" == "yes" && "${Fragment Of Water}" == "yes"}
+        {#showme {You can create Minor Crushing Aggression (Blunt WC) (clvl 4-8)};};
+
+        #if {"${Eye Of Flame}" == "yes" && "${Morganite Dust}" == "yes" && "${Fragment Of Light}" == "yes"}
+        {#showme {You can create Minor Flame Protection (Fire AC) (clvl 5-9)};};
+
+        #if {"${Eye Of Flame}" == "yes" && "${Morganite Dust}" == "yes" && "${Fragment Of Light}" == "yes"}
+        {#showme {You can create Minor Flame Aggression (Fire WC) (clvl 6-10)};};
+
+        #if {"${Morganite}" == "yes" && "${Tiger's Eye Dust}" == "yes" && "${Fragment Of Shadow}" == "yes"}
+        {#showme {You can create Minor Endurance (Con) (clvl 7-11)};};
+
+        #if {"${Eye Of Frost}" == "yes" && "${Morganite Dust}" == "yes" && "${Fragment Of Water}" == "yes"}
+        {#showme {You can create Minor Frost Protection (Ice AC) (clvl 8-12)};};
+
+        #if {"${Eye Of Frost}" == "yes" && "${Morganite Dust}" == "yes" && "${Fragment Of Water}" == "yes"}
+        {#showme {You can create Minor Frost Aggression (Ice WC) (clvl 9-13)};};
+
+        #if {"${Cat's Eye}" == "yes" && "${Iron Shards}" == "yes" && "${Fragment Of Might}" == "yes"}
+        {#showme {You can create Minor Lion (Str/Con) (clvl 10-14)};};
+
+        #if {"${Bronze Shards}" == "yes" && "${Morganite}" == "yes" && "${Fragment Of Might}" == "yes"}
+        {#showme {You can create Minor Acid Protection (Acid AC) (clvl 10-14)};};
+
+        #if {"${Bronze Shards}" == "yes" && "${Morganite}" == "yes" && "${Fragment Of Might}" == "yes"}
+        {#showme {You can create Minor Acid Aggression (Acid WC) (clvl 11-15)};};
+
+        #if {"${Cat's Eye Dust}" == "yes" && "${Eye Of Flame}" == "yes" && "${Fragment Of Might}" == "yes"}
+        {#showme {You can create Minor Terminator (Str/Dex) (clvl 11-15)};};
+
+        #if {"${Cat's Eye}" == "yes" && "${Iron Shards}" == "yes" && "${Fragment Of Shadow}" == "yes"}
+        {#showme {You can create Minor Smarts (Int) (clvl 12-16)};};
+
+        #if {"${Bronze Shards}" == "yes" && "${Cat's Eye}" == "yes" && "${Fragment Of Rage}" == "yes"}
+        {#showme {You can create Minor Electric Protection (Electric AC) (clvl 12-16)};};
+
+        #if {"${Eye Of Flame}" == "yes" && "${Iron Shards}" == "yes" && "${Fragment Of Shadow}" == "yes"}
+        {#showme {You can create Minor Clever Thief (Dex/Int) (clvl 13-17)};};
+
+        #if {"${Bronze Shards}" == "yes" && "${Cat's Eye}" == "yes" && "${Fragment Of Rage}" == "yes"}
+        {#showme {You can create Minor Electric Aggression (Electric WC) (clvl 13-17)};};
+
+        #if {"${Cat's Eye Dust}" == "yes" && "${Garnet}" == "yes" && "${Fragment Of Soul}" == "yes"}
+        {#showme {You can create Minor Scholar (Int/Wis) (clvl 15-19)};};
+
+        #if {"${Eye Of Flame}" == "yes" && "${Garnet Dust}" == "yes" && "${Fragment Of Soul}" == "yes"}
+        {#showme {You can create Minor Wolf (Dex/Con) (clvl 15-19)};};
+
+        #if {"${Alexandrite}" == "yes" && "${Steel Shards}" == "yes" && "${Fragment Of Rage}" == "yes"}
+        {#showme {You can create Minor Mental Protection (Mind AC) (clvl 15-19)};};
+
+        #if {"${Alexandrite}" == "yes" && "${Steel Shards}" == "yes" && "${Fragment Of Rage}" == "yes"}
+        {#showme {You can create Minor Mental Aggression (Mind WC) (clvl 16-20)};};
+
+        #if {"${Eye Of Frost}" == "yes" && "${Garnet Dust}" == "yes" && "${Fragment Of Soul}" == "yes"}
+        {#showme {You can create Minor Suave Thief (Dex/Cha) (clvl 16-20)};};
+
+        #if {"${Garnet}" == "yes" && "${Garnet Dust}" == "yes" && "${Fragment Of Soul}" == "yes"}
+        {#showme {You can create Minor Insight (Wis) (clvl 16-20)};};
+
+        #if {"${Garnet}" == "yes" && "${Steel Shards}" == "yes" && "${Fragment Of Soul}" == "yes"}
+        {#showme {You can create Minor Energy Protection (Energy AC) (clvl 17-21)};};
+
+        #if {"${Alexandrite}" == "yes" && "${Silver Shards}" == "yes" && "${Fragment Of The Unseen}" == "yes"}
+        {#showme {You can create Minor Assault Protection (Edged and Blunt AC) (clvl 18-22)};};
+
+        #if {"${Garnet}" == "yes" && "${Steel Shards}" == "yes" && "${Fragment Of Soul}" == "yes"}
+        {#showme {You can create Minor Energy Aggression (Energy WC) (clvl 18-22)};};
+
+        #if {"${Alexandrite Dust}" == "yes" && "${Garnet}" == "yes" && "${Fragment Of The Unseen}" == "yes"}
+        {#showme {You can create Minor Persuasiveness (Cha) (clvl 18-22)};};
+
+        #if {"${Eye Of Earth}" == "yes" && "${Silver Shards}" == "yes" && "${Fragment Of The Unseen}" == "yes"}
+        {#showme {You can create Minor Assault Aggression (Edged and Blunt WC) (clvl 19-23)};};
+        
+        #if {"${Alexandrite}" == "yes" && "${Alexandrite Dust}" == "yes" && "${Fragment Of The Unseen}" == "yes"}
+        {#showme {You can create Minor Barbarian (Int/Str) (clvl 19-23)};};
+
+        #if {"${Eye Of Flame}" == "yes" && "${Eye Of Frost}" == "yes" && "${Fragment Of The Unseen}" == "yes"}
+        {#showme {You can create Minor Elements Protection (Fire and Ice AC) (clvl 20-24)};};
+
+        #if {"${Alexandrite}" == "yes" && "${Alexandrite Dust}" == "yes" && "${Fragment Of Ascension}" == "yes"}
+        {#showme {You can create Minor Jackal (Int/Con) (clvl 20-24)};};
+
+        #if {"${Eye Of Flame}" == "yes" && "${Eye Of Frost}" == "yes" && "${Fragment Of The Unseen}" == "yes"}
+        {#showme {You can create Minor Elements Aggression (Fire and Ice WC) (clvl 21-25)};};
+
+        #if {"${Beryl}" == "yes" && "${Garnet Dust}" == "yes" && "${Fragment Of Ascension}" == "yes"}
+        {#showme {You can create Minor Thespian (Int/Cha) (clvl 21-25)};};
+
+        #if {"${Roan's Tears}" == "yes" && "${Silver Shards}" == "yes" && "${Fragment Of Ascension}" == "yes"}
+        {#showme {You can create Minor Poison Protection (Poison AC) (clvl 21-25)};};
+
+        #if {"${Eye Of Earth}" == "yes" && "${Pyrite Dust}" == "yes" && "${Fragment Of Blasting}" == "yes"}
+        {#showme {You can create Minor Detective (Str/Cha) (clvl 22-26)};};
+        
+        #if {"${Roan's Tears}" == "yes" && "${Silver Shards}" == "yes" && "${Fragment Of Ascension}" == "yes"}
+        {#showme {You can create Minor Poison Aggression (Poison WC) (clvl 22-26)};};
+        
+        #if {"${Pyrite}" == "yes" && "${Silver Shards}" == "yes" && "${Fragment Of Damnation}" == "yes"}
+        {#showme {You can create Minor Radiation Protection (Radiation AC) (clvl 23-27)};};
+
+        #if {"${Pyrite}" == "yes" && "${Pyrite Dust}" == "yes" && "${Fragment Of Blasting}" == "yes"}
+        {#showme {You can create Minor Thief At Large (Dex/Wis) (clvl 23-27)};};
+
+        #if {"${Pyrite}" == "yes" && "${Silver Shards}" == "yes" && "${Fragment Of Damnation}" == "yes"}
+        {#showme {You can create Minor Radiation Aggression (Radiation WC) (clvl 24-28)};};
+
+        #if {"${Eye Of Earth}" == "yes" && "${Silver Shards}" == "yes" && "${Fragment Of Willy}" == "yes"}
+        {#showme {You can create Minor Devouring Protection (Poison and Acid AC) (clvl 24-28)};};
+
+        #if {"${Pyrite Dust}" == "yes" && "${Roan's Tears}" == "yes" && "${Fragment Of Willy}" == "yes"}
+        {#showme {You can create Minor Elephant (Con/Wis) (clvl 25-29)};};
+
+        #if {"${Beryl}" == "yes" && "${Silver Shards}" == "yes" && "${Fragment Of Willy}" == "yes"}
+        {#showme {You can create Minor Devouring Aggression (Poison and Acid WC) (clvl 26-30)};};
+
+        #if {"${Pyrite}" == "yes" && "${Tourmaline Dust}" == "yes" && "${Fragment Of Destruction}" == "yes"}
+        {#showme {You can create Minor Abbot (Wis/Cha) (clvl 27-31)};};
+
+        #if {"${Roan's Tears}" == "yes" && "${Silver Shards}" == "yes" && "${Fragment Of Destruction}" == "yes"}
+        {#showme {You can create Minor Domination Protection (Mind and Energy AC) (clvl 27-31)};};
+
+        #if {"${Beryl Dust}" == "yes" && "${Tourmaline}" == "yes" && "${Fragment Of Compassion}" == "yes"}
+        {#showme {You can create Minor Agent (Str/Wis) (clvl 28-32)};};
+
+        #if {"${Beryl}" == "yes" && "${Tourmaline Dust}" == "yes" && "${Fragment Of Knowledge}" == "yes"}
+        {#showme {You can create Minor Athlete (Str/Dex/Con) (clvl 28-32)};};
+
+        #if {"${Gold Shards}" == "yes" && "${Tourmaline}" == "yes" && "${Fragment Of Compassion}" == "yes"}
+        {#showme {You can create Minor Irradiation Aggression (Electric and Radiation WC) (clvl 29-33)};};
+
+        #if {"${Roan's Tears}" == "yes" && "${Silver Shards}" == "yes" && "${Fragment Of Destruction}" == "yes"}
+        {#showme {You can create Minor Domination Aggression (Mind and Energy WC) (clvl 29-33)};};
+
+        #if {"${Eye Of Air}" == "yes" && "${Tourmaline Dust}" == "yes" && "${Fragment Of Knowledge}" == "yes"}
+        {#showme {You can create Minor Koala (Con/Cha) (clvl 30-34)};};
+
+        #if {"${Gold Shards}" == "yes" && "${Tourmaline}" == "yes" && "${Fragment Of Compassion}" == "yes"}
+        {#showme {You can create Minor Irradiation Protection (Electric and Radiation AC) (clvl 30-34)};};
+
+        #if {"${Amethyst Dust}" == "yes" && "${Tourmaline}" == "yes" && "${Fragment Of Knowledge}" == "yes"}
+        {#showme {You can create Minor Despot (Int/Wis/Cha) (clvl 31-35)};};
+
+        #if {"${Topaz}" == "yes" && "${Topaz Dust}" == "yes" && "${Essence Of Light}" == "yes"}
+        {#showme {You can create Standard Might (Str) (clvl 33-37)};};
+
+        #if {"${Amethyst}" == "yes" && "${Gold Shards}" == "yes" && "${Essence Of Light}" == "yes"}
+        {#showme {You can create Standard Blades Aggression (Edged WC) (clvl 33-37)};};
+        
+        #if {"${Gold Shards}" == "yes" && "${Topaz}" == "yes" && "${Essence Of Light}" == "yes"}
+        {#showme {You can create Standard Blades Protection (Edged AC) (clvl 34-38)};};        
+
+        #if {"${Mithril Shards}" == "yes" && "${Topaz}" == "yes" && "${Essence Of Water}" == "yes"}
+        {#showme {You can create Standard Crushing Protection (Blunt AC) (clvl 35-39)};};
+
+        #if {"${Eye Of Air}" == "yes" && "${Topaz Dust}" == "yes" && "${Essence Of Light}" == "yes"}
+        {#showme {You can create Standard Agility (Dex) (clvl 35-39)};};
+
+        #if {"${Amethyst}" == "yes" && "${Mithril Shards}" == "yes" && "${Essence Of Water}" == "yes"}
+        {#showme {You can create Standard Crushing Aggression (Blunt WC) (clvl 36-40)};};
+
+        #if {"${Core Of Flame}" == "yes" && "${Mithril Shards}" == "yes" && "${Essence Of Light}" == "yes"}
+        {#showme {You can create Standard Flame Protection (Fire AC) (clvl 37-41)};};
+
+        #if {"${Happy Ed's Tears}" == "yes" && "${Hematite Dust}" == "yes" && "${Essence Of Shadow}" == "yes"}
+        {#showme {You can create Standard Health (HP Regen) (clvl 37-41)};};
+
+        #if {"${Core Of Flame}" == "yes" && "${Mithril Shards}" == "yes" && "${Essence Of Light}" == "yes"}
+        {#showme {You can create Standard Flame Aggression (Fire WC) (clvl 38-42)};};
+
+        #if {"${Happy Ed's Tears}" == "yes" && "${Hematite Dust}" == "yes" && "${Essence Of Shadow}" == "yes"}
+        {#showme {You can create Standard Endurance (Con) (clvl 39-43)};};
+
+        #if {"${Amethyst}" == "yes" && "${Mithril Shards}" == "yes" && "${Essence Of Might}" == "yes"}
+        {#showme {You can create Standard Acid Protection (Acid AC) (clvl 40-44)};};
+
+        #if {"${Amethyst}" == "yes" && "${Mithril Shards}" == "yes" && "${Essence Of Might}" == "yes"}
+        {#showme {You can create Standard Acid Aggression (Acid WC) (clvl 41-45)};};
+
+        #if {"${Core Of Frost}" == "yes" && "${Mithril Shards}" == "yes" && "${Essence Of Water}" == "yes"}
+        {#showme {You can create Standard Frost Protection (Ice/Cold AC) (clvl 42-46)};};
+
+        #if {"${Heliodor Dust}" == "yes" && "${Topaz}" == "yes" && "${Essence Of Might}" == "yes"}
+        {#showme {You can create Standard Lion (Str/Con) (clvl 42-46)};};
+
+        #if {"${Heliodor}" == "yes" && "${Heliodor Dust}" == "yes" && "${Essence Of Might}" == "yes"}
+        {#showme {You can create Standard Terminator (Str/Dex) (clvl 43-47)};};
+
+        #if {"${Core Of Frost}" == "yes" && "${Mithril Shards}" == "yes" && "${Essence Of Water}" == "yes"}
+        {#showme {You can create Standard Frost Aggression (Ice/Cold WC) (clvl 43-47)};};
+
+        #if {"${Topaz}" == "yes" && "${Hematite Dust}" == "yes" && "${Essence Of Rejuvenation}" == "yes"}
+        {#showme {You can create Standard Spirit (SP Regen) (clvl 43-37)};};
+
+        #if {"${Core Of Frost}" == "yes" && "${Hematite Dust}" == "yes" && "${Essence Of Shadow}" == "yes"}
+        {#showme {You can create Standard Smarts (Int) (clvl 44-48)};};
+
+        #if {"${Core Of Flame}" == "yes" && "${Titanium Shards}" == "yes" && "${Essence Of Rage}" == "yes"}
+        {#showme {You can create Standard Electric Protection (Electric AC) (clvl 44-48)};};
+
+        #if {"${Core Of Flame}" == "yes" && "${Titanium Shards}" == "yes" && "${Essence Of Rage}" == "yes"}
+        {#showme {You can create Standard Electric Aggression (Electric WC) (clvl 45-49)};};
+        
+        #if {"${Happy Ed's Tears}" == "yes" && "${Heliodor Dust}" == "yes" && "${Essence Of Shadow}" == "yes"}
+        {#showme {You can create Standard Clever Thief (Dex/Int) (clvl 45-49)};};  
+
+        #if {"${Heliodor}" == "yes" && "${Hematite Dust}" == "yes" && "${Essence Of Rejuvenation}" == "yes"}
+        {#showme {You can create Standard Excessive Health (Overmax HP Regen) (clvl 46-50)};};
+        
+        #if {"${Hematite}" == "yes" && "${Hematite Dust}" == "yes" && "${Essence Of Soul}" == "yes"}
+        {#showme {You can create Standard Scholar (Int/Wis) (clvl 47-51)};};
+
+        #if {"${Heliodor}" == "yes" && "${Heliodor Dust}" == "yes" && "${Essence Of Soul}" == "yes"}
+        {#showme {You can create Standard Wolf (Dex/Con) (clvl 47-51)};};
+
+        #if {"${Core Of Frost}" == "yes" && "${Titanium Shards}" == "yes" && "${Essence Of Rage}" == "yes"}
+        {#showme {You can create Standard Mental Protection (Mental AC) (clvl 47-51)};};
+
+        #if {"${Hematite}" == "yes" && "${Peridot Dust}" == "yes" && "${Essence Of Soul}" == "yes"}
+        {#showme {You can create Standard Insight (Wis) (clvl 48-52)};};
+
+        #if {"${Heliodor Dust}" == "yes" && "${Hematite}" == "yes" && "${Essence Of Soul}" == "yes"}
+        {#showme {You can create Standard Suave Thief (Dex/Cha) (clvl 48-52)};};
+
+        #if {"${Core Of Frost}" == "yes" && "${Titanium Shards}" == "yes" && "${Essence Of Rage}" == "yes"}
+        {#showme {You can create Standard Mental Aggression (Mental WC) (clvl 48-52)};};
+
+        #if {"${Peridot}" == "yes" && "${Titanium Shards}" == "yes" && "${Essence Of Soul}" == "yes"}
+        {#showme {You can create Standard Energy Protection (Energy AC) (clvl 49-53)};};
+        
+        #if {"${Core Of Earth}" == "yes" && "${Ebon Shards}" == "yes" && "${Essence Of The Unseen}" == "yes"}
+        {#showme {You can create Standard Assault Protection (Edged and Blunt AC) (clvl 50-54)};};        
+        
+        #if {"${Peridot}" == "yes" && "${Peridot Shards}" == "yes" && "${Essence Of Soul}" == "yes"}
+        {#showme {You can create Standard Excessive Spirit (Overmax SP Regen) (clvl 50-54)};};
+
+        #if {"${Hematite}" == "yes" && "${Peridot Dust}" == "yes" && "${Essence Of The Unseen}" == "yes"}
+        {#showme {You can create Standard Persuasiveness (Charisma) (clvl 50-54)};};
+
+        #if {"${Peridot}" == "yes" && "${Titanium Shards}" == "yes" && "${Essence Of Soul}" == "yes"}
+        {#showme {You can create Standard Energy Aggression (Energy WC) (clvl 50-54)};};
+
+        #if {"${Core Of Earth}" == "yes" && "${Ebon Shards}" == "yes" && "${Essence Of The Unseen}" == "yes"}
+        {#showme {You can create Standard Assault Aggression (Edged and Blunt WC) (clvl 51-55)};};
+
+        #if {"${Heliodor}" == "yes" && "${Peridot Dust}" == "yes" && "${Essence Of The Unseen}" == "yes"}
+        {#showme {You can create Standard Barbarian (Int/Str) (clvl 51-55)};};
+
+        #if {"${Heliodor}" == "yes" && "${Peridot Dust}" == "yes" && "${Essence Of The Unseen}" == "yes"}
+        {#showme {You can create Standard Health and Spirit (HP/SP Regen) (clvl 52-56)};};
+
+        #if {"${Heliodor Dust}" == "yes" && "${Peridot}" == "yes" && "${Essence Of Ascension}" == "yes"}
+        {#showme {You can create Standard Jackal (Int/Con) (clvl 52-56)};};
+
+        #if {"${Core Of Flames}" == "yes" && "${Core Of Frost}" == "yes" && "${Essence Of The Unseen}" == "yes"}
+        {#showme {You can create Standard Elements Protection (Fire and Ice AC) (clvl 52-56)};};
+
+        #if {"${Core Of Flame}" == "yes" && "${Core Of Frost}" == "yes" && "${Essence Of The Unseen}" == "yes"}
+        {#showme {You can create Standard Elements Aggression (Fire and Ice WC) (clvl 53-57)};};
+
+        #if {"${Peridot}" == "yes" && "${Peridot Dust}" == "yes" && "${Essence Of Ascension}" == "yes"}
+        {#showme {You can create Standard Thespian (Int/Cha) (clvl 53-57)};};
+
+        #if {"${Core Of Earth}" == "yes" && "${Ebon Shards}" == "yes" && "${Essence Of Ascension}" == "yes"}
+        {#showme {You can create Standard Poison Protection (Poison AC) (clvl 53-57)};};
+
+        #if {"${Heliodor Dust}" == "yes" && "${Peridot}" == "yes" && "${Essence Of Blasting}" == "yes"}
+        {#showme {You can create Standard Detective (Str/Cha) (clvl 54-58)};};
+
+        #if {"${Core Of Earth}" == "yes" && "${Ebon Shards}" == "yes" && "${Essence Of Ascension}" == "yes"}
+        {#showme {You can create Standard Poison Aggression (Poison WC) (clvl 54-58)};};
+
+        #if {"${Adamantium Shards}" == "yes" && "${Pearl}" == "yes" && "${Essence Of Damnation}" == "yes"}
+        {#showme {You can create Standard Radiation Protection (Radiation AC) (clvl 55-59)};};
+
+        #if {"${Pearl}" == "yes" && "${Peridot Dust}" == "yes" && "${Essence Of Blasting}" == "yes"}
+        {#showme {You can create Standard Thief At Large (Dex/Wis) (clvl 55-59)};};
+
+        #if {"${Adamantium Shards}" == "yes" && "${Pearl}" == "yes" && "${Essence Of Damnation}" == "yes"}
+        {#showme {You can create Standard Radiation Aggression (Radiation WC) (clvl 56-60)};};
+
+        #if {"${Adamantium Shards}" == "yes" && "${Core Of Earth}" == "yes" && "${Essence Of Willy}" == "yes"}
+        {#showme {You can create Standard Devouring Protection (Poison and Acid AC) (clvl 56-60)};};
+
+        #if {"${Peridot}" == "yes" && "${Pearl Dust}" == "yes" && "${Essence Of Damnation}" == "yes"}
+        {#showme {You can create Standard Spirit And Excessive Health (Overmax HP Regen & SP Regen) (clvl 57-61)};};
+
+        #if {"${Pearl}" == "yes" && "${Pearl Dust}" == "yes" && "${Essence Of Willy}" == "yes"}
+        {#showme {You can create Standard Elephant (Con/Wis) (clvl 57-61)};};
+
+        #if {"${Adamantium Shards}" == "yes" && "${Core Of Earth}" == "yes" && "${Essence Of Willy}" == "yes"}
+        {#showme {You can create Standard Devouring Aggression (Poison and Acid AC) (clvl 58-62)};};
+
+        #if {"${Core Of Air}" == "yes" && "${Obsidian Shards}" == "yes" && "${Essence Of Destruction}" == "yes"}
+        {#showme {You can create Standard Domination Protection (Mental AC) (clvl 59-63)};};
+
+        #if {"${Core Of Air}" == "yes" && "${Peridot Dust}" == "yes" && "${Essence Of Destruction}" == "yes"}
+        {#showme {You can create Standard Abbot (Wis/Cha) (clvl 59-63)};};
+
+        #if {"${Opal}" == "yes" && "${Pearl Dust}" == "yes" && "${Essence Of Knowledge}" == "yes"}
+        {#showme {You can create Standard Athlete (Str/Dex/Con) (clvl 60-64)};};
+
+        #if {"${Opal}" == "yes" && "${Opal Dust}" == "yes" && "${Essence Of Compassion}" == "yes"}
+        {#showme {You can create Standard Agent (Str/Wis) (clvl 60-64)};};
+
+        #if {"${Opal}" == "yes" && "${Pearl Dust}" == "yes" && "${Essence Of Destruction}" == "yes"}
+        {#showme {You can create Standard Health And Excessive Spirit (HP Regen & Overmax SP Regen) (clvl 60-64)};};
+        
+        #if {"${Core Of Air}" == "yes" && "${Adamantium Shards}" == "yes" && "${Essence Of Destruction}" == "yes"}
+        {#showme {You can create Standard Domination Aggression (Mental & Energy WC) (clvl 61-65)};};
+
+        #if {"${Core Of Air}" == "yes" && "${Obsidian Shards}" == "yes" && "${Essence Of Compassion}" == "yes"}
+        {#showme {You can create Standard Irradiation Aggression (Electric & Radiation WC) (clvl 61-65)};};
+
+        #if {"${Core Of Air}" == "yes" && "${Obsidian Shards}" == "yes" && "${Essence Of Compassion}" == "yes"}
+        {#showme {You can create Standard Irradiation Protection (Electric & Radiation AC) (clvl 62-66)};};
+
+        #if {"${Opal}" == "yes" && "${Opal Dust}" == "yes" && "${Essence Of Knowledge}" == "yes"}
+        {#showme {You can create Standard Koala (Con/Cha) (clvl 63-67)};};
+
+        #if {"${Ghoti's Tears}" == "yes" && "${Pearl Dust}" == "yes" && "${Essence Of Knowledge}" == "yes"}
+        {#showme {You can create Standard Despot (Int/Wis/Cha) (clvl 64-68)};};
+
+        #if {"${Pearl}" == "yes" && "${Opal Dust}" == "yes" && "${Essence Of Knowledge}" == "yes"}
+        {#showme {You can create Standard Excessive Health & Spirit (Overmax HP/SP Regen) (clvl 65-69)};};
+
+        #if {"${Opal}" == "yes" && "${Opal Dust}" == "yes" && "${Heart Of Light}" == "yes"}
+        {#showme {You can create Major Might (Str) (clvl 66-70)};};
+
+        #if {"${Ghoti's Tears}" == "yes" && "${Obsidian Shards}" == "yes" && "${Heart Of Light}" == "yes"}
+        {#showme {You can create Major Blades Aggression (clvl 67-71)};};
+
+        #if {"${Ghoti's Tears}" == "yes" && "${Obsidian Shards}" == "yes" && "${Heart Of Light}" == "yes"}
+        {#showme {You can create Major Blades Protection (clvl 67-71)};};
+
+        #if {"${Ghoti's Tears}" == "yes" && "${Nethernium Shards}" == "yes" && "${Heart Of Water}" == "yes"}
+        {#showme {You can create Major Crushing Protection (clvl 68-72)};};
+
+        #if {"${Star Of Flame}" == "yes" && "${Opal Dust}" == "yes" && "${Heart Of Light}" == "yes"}
+        {#showme {You can create Major Agility (Dex) (clvl 68-72)};};
+
+        #if {"${Ghoti's Tears}" == "yes" && "${Nethernium Shards}" == "yes" && "${Heart Of Water}" == "yes"}
+        {#showme {You can create Major Crushing Aggression (clvl 69-73)};};
+
+        #if {"${Star Of Flame}" == "yes" && "${Nethernium Shards}" == "yes" && "${Heart Of Light}" == "yes"}
+        {#showme {You can create Major Flame Protection (clvl 70-74)};};
+
+        #if {"${Star Of Flame}" == "yes" && "${Opal Dust}" == "yes" && "${Heart Of Shadow}" == "yes"}
+        {#showme {You can create Major Health (clvl 70-74)};};
+
+        #if {"${Star Of Flame}" == "yes" && "${Nethernium Shards}" == "yes" && "${Heart Of Light}" == "yes"}
+        {#showme {You can create Major Flame Aggression (clvl 71-75)};};
+
+        #if {"${Star Of Flame}" == "yes" && "${Opal Dust}" == "yes" && "${Heart Of Shadow}" == "yes"}
+        {#showme {You can create Major Endurance (clvl 72-76)};};
+
+        #if {"${Star Of Frost}" == "yes" && "${Voidstone Shards}" == "yes" && "${Heart Of Water}" == "yes"}
+        {#showme {You can create Major Frost Protection (clvl 73-77)};};
+
+        #if {"${Star Of Frost}" == "yes" && "${Voidstone Shards}" == "yes" && "${Heart Of Water}" == "yes"}
+        {#showme {You can create Major Frost Aggression (clvl 74-78)};};
+
+        #if {"${Shansabyk's Tears}" == "yes" && "${Voidstone Shards}" == "yes" && "${Heart Of Might}" == "yes"}
+        {#showme {You can create Major Acid Protection (clvl 75-79)};};
+
+        #if {"${Diamond Dust}" == "yes" && "${Diamond}" == "yes" && "${Heart Of Might}" == "yes"}
+        {#showme {You can create Major Lion (Con/Str) (clvl 75-79)};};
+
+        #if {"${Diamond}" == "yes" && "${Opal Dust}" == "yes" && "${Heart Of Rejuvenation}" == "yes"}
+        {#showme {You can create Major Spirit (SP Regen) (clvl 76-80)};};
+
+        #if {"${Diamond Dust}" == "yes" && "${Star Of Frost}" == "yes" && "${Heart Of Might}" == "yes"}
+        {#showme {You can create Major Terminator (Str/Dex) (clvl 76-80)};};
+
+        #if {"${Shansabyk's Tears}" == "yes" && "${Voidstone Shards}" == "yes" && "${Heart Of Might}" == "yes"}
+        {#showme {You can create Major Acid Aggression (clvl 76-80)};};
+
+        #if {"${Diamond Dust}" == "yes" && "${Diamond}" == "yes" && "${Heart Of Shadow}" == "yes"}
+        {#showme {You can create Major Smarts (Int) (clvl 77-81)};};
+
+        #if {"${Shansabyk's Tears}" == "yes" && "${Voidstone Shards}" == "yes" && "${Heart Of Rage}" == "yes"}
+        {#showme {You can create Major Electric Protection (clvl 77-81)};};
+
+        #if {"${Diamond Dust}" == "yes" && "${Star Of Flame}" == "yes" && "${Heart Of Shadow}" == "yes"}
+        {#showme {You can create Major Clever Thief (Dex/Int) (clvl 78-82)};};
+
+        #if {"${Shansabyk's Tears}" == "yes" && "${Voidstone Shards}" == "yes" && "${Heart Of Rage}" == "yes"}
+        {#showme {You can create Major Electric Aggression (clvl 78-82)};};
+
+        #if {"${Diamond}" == "yes" && "${Opal Dust}" == "yes" && "${Heart Of Rejuvenation}" == "yes"}
+        {#showme {You can create Major Excessive Health (Overmax HP Regen) (clvl 79-83)};};
+
+        #if {"${Phasemetal Shards}" == "yes" && "${Emerald}" == "yes" && "${Heart Of Rage}" == "yes"}
+        {#showme {You can create Major Mental Protection (clvl 80-84)};};
+
+        #if {"${Emerald}" == "yes" && "${Emerald Dust}" == "yes" && "${Heart Of Soul}" == "yes"}
+        {#showme {You can create Major Wolf (Dex/Con) (clvl 80-84)};};
+
+        #if {"${Diamond}" == "yes" && "${Diamond Dust}" == "yes" && "${Heart Of Soul}" == "yes"}
+        {#showme {You can create Major Scholar (Int/Wis) (clvl 80-84)};};
+
+        #if {"${Diamond Dust}" == "yes" && "${Star Of Frost}" == "yes" && "${Heart Of Soul}" == "yes"}
+        {#showme {You can create Major Suave Thief (Dex/Cha) (clvl 81-85)};};
+
+        #if {"${Emerald}" == "yes" && "${Emerald Dust}" == "yes" && "${Heart Of Soul}" == "yes"}
+        {#showme {You can create Major Insight (Wis) (clvl 81-85)};};
+
+        #if {"${Phasemetal Shards}" == "yes" && "${Emerald}" == "yes" && "${Heart Of Rage}" == "yes"}
+        {#showme {You can create Major Mental Aggression (clvl 81-85)};};
+
+        #if {"${Phasemetal Shards}" == "yes" && "${Star Of Air}" == "yes" && "${Heart Of Soul}" == "yes"}
+        {#showme {You can create Major Energy Protection (clvl 82-86)};};
+
+        #if {"${Phasemetal Shards}" == "yes" && "${Star Of Air}" == "yes" && "${Heart Of The Unseen}" == "yes"}
+        {#showme {You can create Major Assault Protection (clvl 83-87)};};
+
+        #if {"${Phasemetal Shards}" == "yes" && "${Star Of Air}" == "yes" && "${Heart Of Soul}" == "yes"}
+        {#showme {You can create Major Energy Aggression (clvl 83-87)};};
+
+        #if {"${Emerald Dust}" == "yes" && "${Star Of Frost}" == "yes" && "${Heart Of The Unseen}" == "yes"}
+        {#showme {You can create Major Persuasiveness (Cha) (clvl 83-87)};};
+
+        #if {"${Emerald Dust}" == "yes" && "${Shansabyk's Tears}" == "yes" && "${Heart Of Soul}" == "yes"}
+        {#showme {You can create Major Excessive Spirit (clvl 83-87)};};
+
+        #if {"${Emerald}" == "yes" && "${Emerald Dust}" == "yes" && "${Heart Of The Unseen}" == "yes"}
+        {#showme {You can create Major Barbarian (Int/Str) (clvl 84-88)};};
+
+        #if {"${Phasemetal Shards}" == "yes" && "${Star Of Air}" == "yes" && "${Heart Of The Unseen}" == "yes"}
+        {#showme {You can create Major Assault Aggression (clvl 84-88)};};
+
+        #if {"${Star Of Flame}" == "yes" && "${Star Of Frost}" == "yes" && "${Heart Of The Unseen}" == "yes"}
+        {#showme {You can create Major Elements Protection (clvl 85-89)};};
+
+        #if {"${Sapphire}" == "yes" && "${Sapphire Dust}" == "yes" && "${Heart Of Ascension}" == "yes"}
+        {#showme {You can create Major Jackal (Int/Con) (clvl 85-89)};};
+
+        #if {"${Star Of Flame}" == "yes" && "${Star Of Frost}" == "yes" && "${Heart Of The Unseen}" == "yes"}
+        {#showme {You can create Major Elements Aggression (clvl 86-90)};};
+
+        #if {"${Emerald Dust}" == "yes" && "${Sapphire}" == "yes" && "${Heart Of Ascension}" == "yes"}
+        {#showme {You can create Major Thespian (Int/Cha) (clvl 86-90)};};
+
+        #if {"${Phasemetal Shards}" == "yes" && "${Star Of Air}" == "yes" && "${Heart Of Ascension}" == "yes"}
+        {#showme {You can create Major Poison Protection (clvl 86-90)};};
+
+        #if {"${Sapphire}" == "yes" && "${Sapphire Dust}" == "yes" && "${Heart Of Blasting}" == "yes"}
+        {#showme {You can create Major Detective (Str/Cha) (clvl 87-91)};};
+
+        #if {"${Phasemetal Shards}" == "yes" && "${Star Of Air}" == "yes" && "${Heart Of Ascension}" == "yes"}
+        {#showme {You can create Major Poison Aggression (clvl 87-91)};};
+
+        #if {"${Emerald}" == "yes" && "${Sapphire Dust}" == "yes" && "${Heart Of Blasting}" == "yes"}
+        {#showme {You can create Major Thief At Large (Dex/Wis) (clvl 88-92)};};
+
+        #if {"${Phasemetal Shards}" == "yes" && "${Sapphire}" == "yes" && "${Heart Of Damnation}" == "yes"}
+        {#showme {You can create Major Radiation Protection (clvl 88-92)};};
+
+        #if {"${Phasemetal Shards}" == "yes" && "${Sapphire}" == "yes" && "${Heart Of Damnation}" == "yes"}
+        {#showme {You can create Major Radiation Aggression (clvl 89-93)};};
+
+        #if {"${Phasemetal Shards}" == "yes" && "${Star Of Earth}" == "yes" && "${Heart Of Willy}" == "yes"}
+        {#showme {You can create Major Devouring Protection (clvl 89-93)};};
+
+        #if {"${Ruby Dust}" == "yes" && "${Star Of Earth}" == "yes" && "${Heart Of Willy}" == "yes"}
+        {#showme {You can create Major Elephant (Con/Wis) (clvl 90-94)};};
+
+        #if {"${Star Of Earth}" == "yes" && "${Sapphire Dust}" == "yes" && "${Heart Of Damnation}" == "yes"}
+        {#showme {You can create Major Spirit & Excessive Health (SP Regen & Overmax HP Regen) (clvl 90-94)};};
+
+        #if {"${Phasemetal Shards}" == "yes" && "${Star Of Earth}" == "yes" && "${Heart Of Willy}" == "yes"}
+        {#showme {You can create Major Devouring Aggression (clvl 91-95)};};
+
+        #if {"${Ruby}" == "yes" && "${Ruby Dust}" == "yes" && "${Heart Of Destruction}" == "yes"}
+        {#showme {You can create Major Abbot (Wis/Cha) (clvl 92-96)};};
+
+        #if {"${Cancer's Tears}" == "yes" && "${Chaostone Shards}" == "yes" && "${Heart Of Destruction}" == "yes"}
+        {#showme {You can create Major Domination Protection (clvl 92-96)};};
+
+        #if {"${Ruby}" == "yes" && "${Ruby Dust}" == "yes" && "${Heart Of Knowledge}" == "yes"}
+        {#showme {You can create Major Athlete (Str/Dex/Con) (clvl 93-97)};};
+
+        #if {"${Sapphire}" == "yes" && "${Sapphire Dust}" == "yes" && "${Heart Of Compassion}" == "yes"}
+        {#showme {You can create Major Agent (Str/Wis) (clvl 93-97)};};
+
+        #if {"${Chaostone Shards}" == "yes" && "${Ruby}" == "yes" && "${Heart Of Compassion}" == "yes"}
+        {#showme {You can create Major Irradiation Aggression (clvl 94-98)};};
+
+        #if {"${Cancer's Tears}" == "yes" && "${Chaostone Shards}" == "yes" && "${Heart Of Destruction}" == "yes"}
+        {#showme {You can create Major Domination Aggression (clvl 94-98)};};
+
+        #if {"${Chaostone Shards}" == "yes" && "${Ruby}" == "yes" && "${Heart Of Compassion}" == "yes"}
+        {#showme {You can create Major Irradiation Protection (clvl 95-99)};};
+
+        #if {"${Cancer's Tears}" == "yes" && "${Sapphire Dust}" == "yes" && "${Heart Of Knowledge}" == "yes"}
+        {#showme {You can create Major Koala (Con/Cha) (clvl 96-100)};};
+
+        #if {"${Ruby}" == "yes" && "${Ruby Dust}" == "yes" && "${Heart Of Knowledge}" == "yes"}
+        {#showme {You can create Major Despot (Int/Wis/Cha) (clvl 97-101)};};
+
+        #if {"${Cancer's Tears}" == "yes" && "${Ruby Dust}" == "yes" && "${Heart Of Knowledge}" == "yes"}
+        {#showme {You can create Major Excessive Health and Spirit (clvl 98-101)};};
+
+
+#if {"${Copper Bar}" == "yes" && "${Fragment Of Light}" == "yes"}
+        {#showme {You might be able to create 1-Handed Copper Spear (clvl 1-5)};};
+
+#if {"${Copper Bar}" == "yes"}
+        {#showme {You might be able to create Copper Platemail (clvl 1-5)};};
+        
+ #if {"${Copper Bar}" == "yes"}
+        {#showme {You might be able to create Copper Breastplate (clvl 2-6)};};       
+
+#if {"${Copper Bar}" == "yes" && "${Fragment Of Light}" == "yes"}
+        {#showme {You might be able to create 2-Handed Copper Spear (clvl 2-6)};};
+
+ #if {"${Copper Bar}" == "yes"}
+        {#showme {You might be able to create Copper Greaves (clvl 3-7)};}; 
+
+#if {"${Copper Bar}" == "yes" && "${Fragment Of Water}" == "yes"}
+        {#showme {You might be able to create 1-Handed Copper Lance (clvl 3-7)};};
+
+#if {"${Copper Bar}" == "yes" && "${Fragment Of Water}" == "yes"}
+        {#showme {You might be able to create 2-Handed Copper Lance (clvl 4-8)};};
+
+ #if {"${Copper Bar}" == "yes"}
+        {#showme {You might be able to create Copper Shield (clvl 4-8)};}; 
+
+#if {"${Copper Bar}" == "yes" && "${Fragment Of Shadow}" == "yes"}
+        {#showme {You might be able to create 1-Handed Copper Mace (clvl 5-9)};};
+
+#if {"${Copper Bar}" == "yes" && "${Copper Shards}" == "yes"}
+        {#showme {You might be able to create Copper Codpiece (clvl 5-9)};};
+
+#if {"${Copper Bar}" == "yes" && "${Fragment Of Shadow}" == "yes"}
+        {#showme {You might be able to create 2-Handed Copper Mace (clvl 6-10)};};
+
+#if {"${Copper Bar}" == "yes" && "${Copper Shards}" == "yes"}
+        {#showme {You might be able to create Copper Helmet (clvl 6-10)};};
+
+#if {"${Bronze Bar}" == "yes" && "${Copper Shards}" == "yes" && "${Fragment Of Water}" == "yes"}
+        {#showme {You might be able to create 1-Handed Bronze Spear (clvl 6-10)};};
+
+#if {"${Copper Bar}" == "yes" && "${Copper Shards}" == "yes" && "${Tiger's Eye Dust}" == "yes"}
+        {#showme {You might be able to create Copper Gloves (clvl 7-11)};};
+
+#if {"${Copper Bar}" == "yes" && "${Fragment Of Might}" == "yes"}
+        {#showme {You might be able to create 1-Handed Copper Axe (clvl 7-11)};};
+
+
+};
+    #delay {craftkill} {#class crafting kill} {2};setmod ROWS 30;#gag {Your new value for ROWS is 30.}
+    }
+
